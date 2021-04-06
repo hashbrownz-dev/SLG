@@ -1,0 +1,46 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <title>Shopping List Generator</title>
+        <meta name = "author" content = "Hashbrownz">
+        <meta name = "description" content = "A shopping list generator">
+        <link rel = "stylesheet" type = "text/css" href = "css/index.css">
+        <link rel = "stylesheet" href="https://use.typekit.net/ehr3syf.css">
+        <script type = "text/javascript" src = "js/global.js"></script>
+        <script type = "text/javascript" src = "js/init.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Shopping List Generator</h1>
+            <ul>
+                <li><a href = "shoppinglist.html">Shopping List</a></li>
+                <li><a href = "recipebook.html">My Recipe Book</a></li>
+                <li><a href = "pantry.html">My Pantry</a></li>
+                <li><a href = "help.html">Help</a></li>
+            </ul>
+        </header>
+        <div id = "page_title">
+            <h2>Shopping List Generator</h2>
+        </div>
+        <div id = "card_container">
+            <div class = "card" id = "shoppinglist">
+                <a href="shoppinglist.html">New Shopping List</a>
+            </div>
+            <div class = "card" id = "recipebook">
+                <a href="recipebook.html">My Recipe Book</a>
+            </div>
+            <div class = "card" id = "pantry">
+                <a href="pantry.html">My Pantry</a>
+            </div>
+        </div>
+        <footer>
+            SLG v2.1.0 by <a href = "http://www.hashbrownz.net">Roosevelt B.</a> &copy 2020
+        </footer>
+        <script>
+            if(!localStorage.getItem('shoppinglist')&&!localStorage.getItem('pantry')&&!localStorage.getItem('recipes')){
+                init();
+            }
+        </script>
+    </body>
+</html>

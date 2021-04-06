@@ -1,0 +1,28 @@
+.pantry_item{
+    font-size: 16px;
+    text-transform: capitalize;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    color:white;
+    background-color: transparent;
+}
+.pantry_item:hover{
+    cursor:pointer;
+}
+.pantry_item:focus{
+    padding-left:16px;
+    color:var(--slg-gray);
+    background-color:var(--slg-teal);
+    position:relative;
+    right:8px;
+    cursor:auto;
+}
+@media screen and (max-width:960px){
+    .pantry_item:focus{
+        padding-left:26px;
+        right:18px;
+    }
+}

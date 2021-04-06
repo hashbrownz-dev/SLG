@@ -1,0 +1,71 @@
+Okay...
+I want to take this time to go over what we want our shopping list component to do.
+1 - A shopping list object consists of 3 properties:
+
+    1)  meals - an array of strings.  contains the names / ids of selected recipes.
+
+    2)  pantry - an array of strings.  contains the names / ids of selected pantry items.
+
+    3)  misc - a string.  contains the contents of the misc input.
+
+2 - A shopping list can be viewed in two ways:
+
+    1)  As an object with the aforementioned properties.
+
+    2)  As a 'list' - an 1d array that contains the name of each unique ingredient / item from the shopping list.
+
+3 - When viewing the shopping list on the 'edit' page, the list object is accessed in it's first form.
+
+3a- The shoppinglist object can be saved by clicking save shopping list.
+
+4 - When viewing the shopping list on the 'view' page, the list object is accessed in it's second form.
+
+5 - I think we should take rearrange our code.  We should organize it the same way we organize our css.  Their should be one main file that contains class definitions and helper functions.  Their should be another file that handles initialization and setting default values.  Then, if necessary their can be smaller individual js files that deal with page specific functionality.
+
+6 - Recipe objects consists of 3 properties:
+
+    1)  name - a string.  the name of the recipe.
+
+    2)  ingredients - an array of strings.  the ingredients.
+
+    3)  directions - an array of strings.  the directions.
+
+7 - Recipe objects should contain an ingredients method which returns the ingredient names as an array.
+
+8 - Ingredient objects consist of 3 properties:
+
+    1)  amount - a number.  How much of an ingredient.
+
+    2)  unit - a string.  Unit of measurement.
+
+    3)  name - a string.  What the ingredient is called.
+
+\\=== ATTENTION ===//
+
+! - The big question I have:  How do we want to treat the shopping list object in this update?  Does it float around in localStorage updating after every page update?  Does it update after each change?  And when we update it... do we create a new shopping list object?
+
+! - Apparently, when our object was saved to localStorage it no longer contained the view() method.  Is this because the js file that knows how to utilize this object is not connected to the right html page or does this have something to do with the way the object is saved?
+
+\\=== Version 2.1 Update Requirements ==//
+
+1   Shopping lists must be saved to localStorage to preserve lists between sessions.
+2   Shopping lists can be saved while editing.  Lists can be accessed between sessions.
+3   Shopping lists must be editable after building.
+
+\\=== TODO ===//
+
+1   Add a save button to shoppinglist.html
+
+2   Fix the clear button on shoppinglist.html
+
+3   Add an edit button to viewshoppinglist.html
+
+4   Fix the clear button on shoppinglist.html
+
+5   Create an init.js file that handles all the programs default properties.
+
+6   Create a better global.js file that contains all class definitions and helper functions.
+
+7   Update Footers for each page
+
+8   Update JS links for each page

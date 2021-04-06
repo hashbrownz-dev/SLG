@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <title>My Pantry</title>
+        <meta name = "author" content = "Hashbrownz">
+        <meta name = "description" content = "Build your shopping list">
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" type = "text/css" href = "css/global.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/pantry.css">
+        <link rel = "stylesheet" href = "https://use.typekit.net/ehr3syf.css">
+        <script type = "text/javascript" src = "js/global.js"></script>
+        <script type = "text/javascript" src = "js/pantry.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1><a href = "index.html">Shopping List Generator</a></h1>
+            <ul id = "nav">
+                <li><a href = "shoppinglist.html">Shopping List</a></li>
+                <li><a href = "recipebook.html">My Recipe Book</a></li>
+                <li><a href = "pantry.html">My Pantry</a></li>
+                <li><a href = "help.html">Help</a></li>
+            </ul>
+        </header>
+        <div id = "page_title">
+            <!--<img id = "hamburger" src = "images/hamburger.png">-->
+            <button type = "button" id = "hamburger" class = "delete_button">&#x2630</button>
+            <h2>My Pantry</h2>
+        </div>
+        <ul id = "pantry" class = "flex_wrap"></ul>
+        <button class = "action_button add" type = "button" onclick = 'addItem("")'>Add Item</button>
+        <button class = "action_button" type = "button" onclick = 'updatePantry()'>Update Pantry</button>
+        <button class = "cancel_button" type = "button" onclick = 'location.reload()'>Cancel</button>
+        <footer>
+            SLG v2.1.0 by <a href = "http://www.hashbrownz.net">Roosevelt B.</a> &copy 2020
+        </footer>
+        <script>
+            loadPantry();
+            navButton();
+        </script>
+    </body>
+</html>

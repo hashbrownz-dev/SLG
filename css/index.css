@@ -1,0 +1,167 @@
+:root{
+    --slg-teal: #0099ff;
+    --slg-blue: #0066cc;
+    --slg-purple: #660066;
+    --slg-gray: #333333;
+    --slg-yellow: #ffcc66;
+}
+html, body, main{
+    height:100%;
+    width:100%;
+    margin:0;
+    font-family:futura-pt, sans-serif;
+    font-weight:700;
+    color:white;
+    background-color:var(--slg-gray);
+}
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-sizing:border-box;
+    height:50px;
+    width:100%;
+    background-color:var(--slg-teal);
+    padding:10px 48px;
+    position:fixed;
+    top:0;
+    left:0;
+}
+header > h1{
+    font-size:24px;
+    font-weight:300;
+    margin:0;
+}
+header > ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+header > ul > li{
+    text-align:center;
+    float:left;
+}
+li > a{
+    text-decoration:none;
+    color:var(--slg-blue);
+    font-size:18px;
+    padding:20px;
+    text-align:center;
+}
+footer{
+    width:100%;
+    min-height:48px;
+    /*background-color:var(--slg-purple);*/
+    font-size:16px;
+    font-weight:300;
+    text-align:center;
+}
+nav{
+    background-color:var(--slg-gray);
+    width:100%;
+    margin:6px 0;
+}
+nav > a{
+    padding:48px;
+    color:var(--slg-yellow);
+    font-weight:300;
+}
+
+/*--Main Content--*/
+#page_title{
+    box-sizing:border-box;
+    height:20%;
+    width:100%;
+    font-size:24px;
+    background-color:var(--slg-teal);
+    text-align:center;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom:24px;
+}
+h2{
+    margin:0;
+    font-weight:150;
+}
+#card_container{
+    width:960px;
+    height:80%;
+    margin:0 auto;
+    box-sizing:border-box;
+    padding: 8px 0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.card{
+    box-sizing:border-box;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:300px;
+    margin:0 10px;
+}
+.card > a{
+    font-size:24px;
+    padding:12px;
+    width:100%;
+    text-align:center;
+    background-color:var(--slg-blue);
+    color:white;
+    text-decoration:none;
+}
+#shoppinglist{
+    background-image:url("../images/shopping-vert-100.jpg");
+}
+#recipebook{
+    background-image:url("../images/recipe-vert-100.jpg");
+}
+#pantry{
+    background-image: url("../images/pantry-vert-100.jpg");
+}
+
+@media screen and (max-width:960px){
+    #card_container{
+        width:100%;
+        padding:0;
+    }
+    #card_container div:first-child{
+        height:34%;
+    }
+    .card{
+        width:100%;
+        height:33%;
+        align-items:flex-end;
+        margin:0;
+    }
+    #shoppinglist{
+        background-image:url("../images/shopping-hor-100.jpg");
+    }
+    #recipebook{
+        background-image: url("../images/recipe-hor-100.jpg");
+    }
+    #pantry{
+        background-image: url("../images/pantry-hor-100.jpg");
+    }
+}
+@media screen and (max-width:839px){
+    header{
+        display:none;
+    }
+}
+@media screen and (max-height:479px){
+    .card{
+        align-items:center;
+    }
+    .card > a{
+        box-sizing:border-box;
+        height:100%;
+        border-top: 1px solid var(--slg-teal);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+}

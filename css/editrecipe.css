@@ -1,0 +1,143 @@
+#recipe_name{
+    height: 64px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    color: var(--slg-blue);
+    background-color: var(--slg-teal);
+}
+#recipe_name > label{
+    /*width: 960px;*/
+    /*margin: 0 auto;*/
+    padding-left: 8px;
+    font-size: 18px;
+}
+#recipe_name > label > input{
+    box-sizing:border-box;
+    height: 36px;
+    width: 600px;
+    font-family:arial, helvetica, sans-serif;
+    font-size: 18px;
+    padding-left: 8px;
+    border: 2px solid var(--slg-blue);
+    outline: none;
+}
+.component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    border-top: 2px solid var(--slg-teal);
+}
+.ingredient{
+    width: 50%;
+    height: 48px;
+}
+#directions{
+    list-style-type: decimal;
+    width: 900px;
+}
+.direction{
+    width: 100%;
+    height: 100px;
+    display: list-item;
+    padding: 10px;
+    border-top: none;
+    margin-bottom: 10px;
+}
+.direction > textarea{
+    resize: none;
+    margin: 0;
+    padding: 10px;
+    padding-right: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 8px solid var(--slg-gray);
+    border-right: 8px solid var(--slg-gray);
+    font-family: arial, helvetica, sans-serif;
+    overflow: hidden;
+}
+.delete_button.up{
+    bottom: 75px;
+}
+.delete_button.down{
+    bottom: 44px;
+}
+.direction > button{
+    bottom: 13px;
+    right: 12px;
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+}
+.input{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: var(--slg-teal);
+    font-size: 18px;
+    padding-left: 8px;
+    margin: 0 8px;
+    border: 1px solid var(--slg-teal);
+}
+.ingredient > button{
+    right: 8px;
+}
+@media screen and (max-width: 920px){
+    #directions{
+        width: 100%;
+    }
+    .direction{
+        list-style-position: inside;
+    }
+    .direction > textarea{
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 840px){
+    #recipe_name{
+        align-items: flex-start;
+    }
+    #recipe_name > label{
+        width: 600px;
+        padding: 0 8px;
+    }
+    #recipe_name > label > input{
+        width: 100%;
+    }
+}
+@media screen and (max-width:640px){
+    #recipe_name > label{
+        width: 100%;
+    }
+    .ingredient{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px){
+    .direction{
+        height: 150px;
+    }
+    .direction > textarea{
+        padding-right: 48px;
+    }
+    .direction > button{
+        height: 48px;
+        width: 48px;
+        font-size: 24px;
+        right: 10px;
+        bottom: 14px;
+    }
+    .delete_button.up{
+        bottom: 108px;
+    }
+    .delete_button.down{
+        bottom: 61px;
+    }
+}

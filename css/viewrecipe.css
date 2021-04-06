@@ -1,0 +1,43 @@
+h4{
+    font-size: 18px;
+    margin: 10px;
+}
+#ingredients{
+    width: 30%;
+}
+.component{
+    margin: 20px 10px;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--slg-teal);
+}
+.ingredients{
+    list-style-type: none;
+    padding-left: 10px;
+}
+#directions{
+    width:70%;
+}
+.directions > li{
+    margin-bottom: 10px;
+}
+@media screen and (max-width:640px){
+    #ingredients{
+        width:100%;
+    }
+    .ingredients{
+        list-style-type: disc;
+        padding-inline-start: 40px;
+    }
+    .ingredients > li{
+        margin-bottom: 10px;
+    }
+    #directions{
+        width:100%;
+    }
+}
+@media print{
+    .flex_wrap{
+        display:block;
+    }
+}

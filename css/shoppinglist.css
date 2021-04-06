@@ -1,0 +1,20 @@
+textarea{
+    box-sizing: border-box;
+    display: block;
+    border: 2px solid var(--slg-teal);
+    background-color: var(--slg-gray);
+    color:white;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 18px;
+    width: 600px;
+    height: 300px;
+    margin: 12px auto;
+    padding: 8px;
+    resize: none;
+}
+@media screen and (max-width:600px){
+    textarea{
+        width:98%;
+        margin: 12px 1%;
+    }
+}
